@@ -9,8 +9,15 @@ const cartSlice = createSlice({
             state.push(action.payload)
         },
 
-        remove(state,action){
-            return state.filter((item)=>item.id !== action.payload)
+        // remove(state,action){
+        //     return state.filter((item)=>item.id !== action.payload)
+        // }
+
+        remove(state, action){
+            const index = state.findIndex(item => item.id === action.payload);
+            if (index !== -1) {
+                state.splice(index, 1); // Removes only one occurrence
+            }
         }
     }
 })
