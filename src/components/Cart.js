@@ -18,7 +18,7 @@ const CartComponent = () => {
 
   const Cards = productCarts?.map((product) => {
     return (
-      <Col key={product.id} span={6} style={{ marginBottom: '10px'}}>
+      <Col key={product.id} xs={24} sm={12} md={8} lg={6}  style={{ marginBottom: '10px'}}>
       <Card
           hoverable
           cover={<img alt={product.title} src={product.image} style={{ width: "100px", height: "130px", margin: "auto" }} />}
@@ -26,7 +26,7 @@ const CartComponent = () => {
               <Button type="primary" danger onClick={() => removeToCart(product.id)}>RemoveItem</Button>
           ]}
       >
-          <Meta title={product.title} description={`INR: ${product.price}`} />
+          <Meta title={product.title}  description={`INR: ${product.price}`} style={{ width: "100px", height: "130px", margin: "auto" }} />
       </Card>
   </Col>
       )

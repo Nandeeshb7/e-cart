@@ -1,0 +1,61 @@
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 64px;
+    width: 100%;
+    background-color: #001529; 
+  }
+  
+  .nav-row {
+    width: 100%;
+  }
+  
+  
+.logo {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    white-space: nowrap; 
+  }
+  
+  .desktop-menu {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .mobile-menu {
+    display: none;
+  }
+
+
+  /* Drawer Menu */
+.drawer-menu {
+    padding: 10px 0;
+  }
+  
+  /* Hide the desktop menu & show the mobile menu on small screens */
+  @media (max-width: 768px) {
+    .desktop-menu {
+      display: none;
+    }
+  
+    .mobile-menu {
+      display: block; 
+    }
+  
+    .menu-button {
+      font-size: 20px;
+      color: white;
+    }
+  }
+
+@media (max-width: 480px) {
+  .ant-drawer-content-wrapper {
+    width: 100% !important;
+  }
+}
+  

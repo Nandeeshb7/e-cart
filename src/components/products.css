@@ -1,0 +1,88 @@
+.product-image {
+    width: 100%; /* Make image fill the card */
+    max-height: 130px;
+    object-fit: cover; /* Prevent image distortion */
+  }
+  
+  @media screen and (max-width: 768px) {
+    .product-image {
+      max-height: 100px;
+    }
+  
+    .ant-card-meta-title {
+      font-size: 14px; 
+    }
+  
+    .ant-btn {
+      font-size: 12px;
+      padding: 5px 8px;
+    }
+  }
+  
+  
+  /* product page */
+  .product-container{
+    padding: 20px;
+    text-align: center;
+  }
+  .product-title{
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: black;
+  }
+  
+  .product-image {
+    width: 100%; /* Make image fill the card */
+    max-height: 150px;
+    object-fit: contain; /* Prevent image distortion */
+  }
+  
+  .ant-card-meta-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .ant-btn {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+  
+  /* Styles for tablets */
+  @media screen and (max-width: 768px) {
+    .product-title {
+      font-size: 1.8rem;
+    }
+  
+    .product-image {
+      max-height: 120px;
+    }
+  
+    .ant-card-meta-title {
+      font-size: 1rem;
+    }
+  
+    .ant-btn {
+      font-size: 12px;
+      padding: 4px 8px;
+    }
+  }
+  
+  /* Styles for mobile */
+  @media screen and (max-width: 480px) {
+    .product-title {
+      font-size: 1.5rem;
+    }
+  
+    .product-image {
+      max-height: 100px;
+    }
+  
+    .ant-card-meta-title {
+      font-size: 0.9rem;
+    }
+  
+    .ant-btn {
+      font-size: 12px;
+      padding: 3px 6px;
+    }
+  }

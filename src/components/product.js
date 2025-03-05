@@ -8,7 +8,7 @@ import { getProducts } from '../store/productsSlice';
 import StatusCode from '../utils/StatusCode';
 import { Card, Button, Row, Col } from 'antd';
 import Meta from 'antd/es/card/Meta';
-
+import './products.css';
 
 
 export default function ProductPage() {
@@ -51,7 +51,7 @@ export default function ProductPage() {
     const Cards = data.map((product) => {
         return (
             
-            <Col key={product.id} span={6} style={{ marginBottom: '10px' }}>
+            <Col key={product.id} span={6}   xs={24} sm={12} md={8} lg={6}  style={{ marginBottom: '10px' }}>
                 <Card
                     hoverable
                     cover={<img alt={product.title} src={product.image} style={{ width: "100px", height: "130px", margin: "auto" }} />}
@@ -59,16 +59,16 @@ export default function ProductPage() {
                         <Button type="primary" onClick={() => addToCart(product)}>Add To Cart</Button>
                     ]}
                 >
-                    <Meta title={product.title} description={`INR: ${product.price}`} />
+                    <Meta style={{ width: "100px", height: "130px", margin: "auto" }} title={product.title} description={`INR: ${product.price}` } />
                 </Card>
             </Col>
 
         )
     })
     return (
-        <div>
-            <h1>Products Dashbord</h1>
-            <Row gutter={[16, 16]}>
+        <div className='product-container'>
+            <h1 className='product-title'>Products Dashbord</h1>
+            <Row gutter={[16, 16]} justify="center">
                 {Cards}
             </Row>
         </div>
